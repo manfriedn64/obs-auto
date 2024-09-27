@@ -55,3 +55,15 @@ if you camera is `Cam1` its text source should be `TextCam1`
 ```
 camera="Cam1 Cam2 Cam3"
 ```
+
+# Install crontab 
+
+```
+20 8 * * * sh -c "cd /home/<user>/obs-auto; ./obs-start.sh > obs-start.out "
+
+30 8 * * * sh -c "cd /home/<user>/obs-auto; ./obs-stream-start.sh >> obs-stream-start.out "
+30 18 * * * sh -c "cd /home/<user>/obs-auto; ./obs-stream-stop.sh >> obs-stream-stop.out "
+30 10,13,16 * * * sh -c "cd /home/<user>/obs-auto; ./obs-record.sh >> obs-record.out "
+
+40 18 * * * killall obs
+```
