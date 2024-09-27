@@ -18,7 +18,7 @@ do
 				$obscli -H$obshost -p$obspass -P$obsport item hide "Text$other"
 			fi
 		done
-		sleep_duration=`eval $randomize_sleep`
+		sleep_duration=`eval $switcher_sleep`
 		echo `date --iso-8601=seconds`" - sleep $sleep_duration"
 		sleep $sleep_duration
 	done
